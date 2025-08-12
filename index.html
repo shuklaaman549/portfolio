@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Aman Shukla - Cloud Engineer & Data Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+    </button>
+    
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Aman.</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-title">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="name">Aman Shukla</span>
+                        <div class="role-container">
+                            <span class="role-static">Aspiring</span>
+                            <span class="role-dynamic" id="roleText"></span>
+                        </div>
+                    </div>
+                    <p class="hero-description">
+                        Exploring the intersection of cloud technologies, data engineering, and efficient problem solving.
+                    </p>
+                </div>
+                <!-- <div class="hero-image">
+                    <div class="image-container">
+                        <img src="myPhoto.PNG" alt="Aman Shukla" class="profile-img">
+                    </div>
+                </div> -->
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Building expertise through diverse technical roles</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-badge">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="timeline-date">Nov 2024 - Present</div>
+                        <h3>AI Model Trainer & Prompt Engineer</h3>
+                        <h4>Remote • Freelance</h4>
+                        <p>Training LLMs through Reinforcement Learning from Human Feedback (RLHF), working on tasks such as designing complex, constraint-based prompts and writing evaluation rubrics for multilingual and logical reasoning tasks. Performing prompt-based SFT (Supervised Fine-Tuning) tasks, focusing on both STEM and general-purpose reasoning capabilities.</p>
+                        <div class="tech-tags">
+                            <span><i class="fas fa-brain"></i> LLMs</span>
+                            <span><i class="fas fa-code"></i> Prompt Engineering</span>
+                            <span><i class="fas fa-chart-line"></i> RLHF</span>
+                            <span><i class="fas fa-language"></i> Multilingual Evaluation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-badge">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="timeline-date">Aug 2024 - Feb 2025</div>
+                        <h3>Associate Developer Intern</h3>
+                        <h4>Anuvrittiksha EdTech</h4>
+                        <p>Worked across multiple cloud-native workflows and scripting pipelines. Automated structured question data uploads into DynamoDB using AWS Glue, managed cloud storage operations via S3, and generated voiceovers using Amazon Polly for educational animations. Collaborated in an Agile environment with active GitHub workflow management.</p>
+                        <div class="tech-tags">
+                            <span><i class="fab fa-aws"></i> AWS Glue</span>
+                            <span><i class="fas fa-database"></i> DynamoDB</span>
+                            <span><i class="fas fa-cloud"></i> S3</span>
+                            <span><i class="fab fa-github"></i> GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-date">Dec 2021 - Jan 2025</div>
+                        <h3>Teaching Volunteer</h3>
+                        <h4>GyanArpan • Government Initiative</h4>
+                        <p>Selected through a government-led initiative to teach high school students for subjects like Mathematics, Physics, Chemistry, and English. Focused on delivering concept-based lessons to underprivileged students, enhancing their academic confidence while developing communication and mentoring abilities.</p>
+                        <div class="tech-tags">
+                            <span><i class="fas fa-calculator"></i> STEM Education</span>
+                            <span><i class="fas fa-users"></i> Mentorship</span>
+                            <span><i class="fas fa-microphone"></i> Public Speaking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Building solutions that demonstrate technical expertise</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://dashcraftbyaman.vercel.app/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>DashCraft</h3>
+                        <p>A collection of four mini data dashboards that combine real-world datasets with Python-based data analysis and visualization. Features clean, interactive dashboards using Streamlit and custom UI enhancements.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-chart-pie"></i> Pandas</span>
+                            <span><i class="fas fa-chart-line"></i> Matplotlib</span>
+                            <span><i class="fas fa-database"></i> SQL</span>
+                            <span><i class="fas fa-stream"></i> Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://jointjot.vercel.app/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>JointJot</h3>
+                        <p>Modern web application designed for seamless note-taking and visual whiteboarding. Features intuitive UI for note creation, canvas-based drawing, and backend integration using Convex for persistent storage.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-react"></i> Next.js</span>
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-js"></i> TypeScript</span>
+                            <span><i class="fas fa-paint-brush"></i> Tailwind</span>
+                            <span><i class="fas fa-database"></i> Convex</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technical expertise across multiple domains</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">DynamoDB</span>
+                        <span class="skill-item">S3</span>
+                        <span class="skill-item">Glue</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Git</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data & Analytics</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Pandas</span>
+                        <span class="skill-item">Numpy</span>
+                        <span class="skill-item">Matplotlib</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Streamlit</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Engineering</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">DSA</span>
+                        <span class="skill-item">Next.js</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Prompting</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">RLHF</span>
+                        <span class="skill-item">Prompt Engineering</span>
+                        <span class="skill-item">Rubric Design</span>
+                        <span class="skill-item">SFT</span>
+                        <span class="skill-item">Model Evaluation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate technologist with focus on cloud and data</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3><i class="fas fa-user-tie"></i> Professional Journey</h3>
+                        <p>I'm a recent B.Tech graduate in Information Technology with a strong focus on cloud computing, data analytics, and software development. During my Associate Developer Internship at Anuvrittiksha, I worked extensively with AWS services like DynamoDB, Glue, S3, and Polly, which deepened my interest in cloud technologies.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3><i class="fas fa-brain"></i> Technical Expertise</h3>
+                        <p>I've built projects like DashCraft, reflecting my hands-on experience with Python, data visualization, and SQL. Alongside this, I've trained large language models by designing prompts, writing evaluation rubrics, and ranking outputs, sharpening my logical reasoning and AI understanding.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3><i class="fas fa-target"></i> Career Focus</h3>
+                        <p>With a solid foundation in data structures, competitive programming, and backend development, I'm currently looking for full-time opportunities where I can contribute to impactful tech solutions in Cloud Engineering, Data Analysis, or Software Development roles.</p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-icon"><i class="fas fa-code"></i></div>
+                            <span class="stat-number">600+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon"><i class="fas fa-star"></i></div>
+                            <span class="stat-number">4★</span>
+                            <span class="stat-label">CodeChef Rating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <i class="fas fa-university"></i>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="education-item">
+                            <h4>B.Tech Information Technology</h4>
+                            <p>Rajiv Gandhi Institute of Petroleum Technology</p>
+                            <span><i class="fas fa-calendar"></i> Dec 2021 - May 2025</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i>
+                            <span>JEE Advanced 2021 Qualified - Top 2%</span>
+                        </div>
+                        <div class="platform-achievements">
+                            <div class="platform">
+                                <i class="fas fa-code"></i>
+                                <span>CodeChef 4★</span>
+                            </div>
+                            <div class="platform">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>LeetCode 600+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Ready to create something amazing together?</p>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:shuklaaman549@gmail.com">shuklaaman549@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+917004046568">+91-7004046568</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <span>Pune, Maharashtra</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:shuklaaman549@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
