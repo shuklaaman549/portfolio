@@ -86,7 +86,6 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// New rotating typewriter effect for roles
 function rotatingTypeWriter() {
     const roles = ['Cloud Engineer', 'Data Analyst', 'Software Developer'];
     const roleElement = document.getElementById('roleText');
@@ -98,35 +97,31 @@ function rotatingTypeWriter() {
         const currentRole = roles[currentRoleIndex];
         
         if (!isDeleting) {
-            // Typing phase
             roleElement.textContent = currentRole.substring(0, currentCharIndex + 1);
             currentCharIndex++;
             
             if (currentCharIndex === currentRole.length) {
-                // Finished typing, wait before deleting
                 setTimeout(() => {
                     isDeleting = true;
                     type();
-                }, 1200); // Wait 2 seconds before deleting
+                }, 1200);
                 return;
             }
             
-            setTimeout(type, 100); // Typing speed
+            setTimeout(type, 100);
         } else {
-            // Deleting phase
             roleElement.textContent = currentRole.substring(0, currentCharIndex);
             currentCharIndex--;
             
             if (currentCharIndex < 0) {
-                // Finished deleting, move to next role
                 isDeleting = false;
                 currentRoleIndex = (currentRoleIndex + 1) % roles.length;
                 currentCharIndex = 0;
-                setTimeout(type, 200); // Wait 0.5 seconds before typing next role
+                setTimeout(type, 200); 
                 return;
             }
             
-            setTimeout(type, 50); // Deleting speed (faster than typing)
+            setTimeout(type, 50); 
         }
     }
     
@@ -188,11 +183,11 @@ function setResponsiveBackground() {
     let backgroundImage;
     
     if (width >= 1024) {
-        backgroundImage = isLightTheme ? './light-room.png' : './dark-room.png';
+        backgroundImage = isLightTheme ? './assests/light-room.png' : './assests/dark-room.png';
     } else if (width >= 768) {
-        backgroundImage = isLightTheme ? './light-room2.png' : './dark-room2.png';
+        backgroundImage = isLightTheme ? './assests/light-room2.png' : './assests/dark-room2.png';
     } else {
-        backgroundImage = isLightTheme ? './light-room1.png' : './dark-room1.png';
+        backgroundImage = isLightTheme ? './assests/light-room1.png' : './assests/dark-room1.png';
     }
     
     body.style.backgroundImage = `url('${backgroundImage}')`;
@@ -211,10 +206,9 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     
-    // Start the rotating typewriter effect for roles
     setTimeout(() => {
         rotatingTypeWriter();
-    }, 500); // Small delay before starting
+    }, 500);
     
     addSectionAnimations();
 });
