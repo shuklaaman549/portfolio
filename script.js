@@ -149,6 +149,11 @@ function initThemeToggle() {
 }
 
 function setResponsiveBackground() {
+  const img = new Image();
+  img.onload = () => {
+    document.body.style.backgroundImage = `url('${backgroundImage}')`;
+  };
+  img.src = backgroundImage;
   const body = document.body;
   const isLightTheme = body.classList.contains('light-theme');
   const width = window.innerWidth;
