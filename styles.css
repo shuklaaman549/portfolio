@@ -603,42 +603,6 @@ transform: scale(1.06);
     gap: 2rem;
 }
 
-.skill-category {
-    background: rgba(3, 5, 7, 0.05) !important;
-    backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-body.light-theme .skill-category {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.skill-category:hover {
-    background: rgba(3, 5, 7, 0.08) !important;
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-body.light-theme .skill-category:hover {
-    background: rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-}
-
-.skill-category h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
 .skill-items {
     display: flex;
     flex-wrap: wrap;
@@ -865,7 +829,6 @@ body.light-theme .footer {
     animation: sectionFloat 3s ease-in-out infinite;
 }
 
-/* SKILLS STACKING EFFECT STYLES */
 .skills-revamp { 
   padding: 100px 0; 
 }
@@ -919,7 +882,6 @@ body.light-theme .skill-card {
   border: 1px solid rgba(0,0,0,0.06);
 }
 
-/* Stacking classes */
 .skill-card.is-stacked-1 {
   transform: translateY(-10px) scale(0.98);
   z-index: 9;
