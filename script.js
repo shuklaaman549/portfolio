@@ -183,11 +183,11 @@ function setResponsiveBackground() {
     let backgroundImage;
     
     if (width >= 1024) {
-        backgroundImage = isLightTheme ? './assests/light-room.png' : './assests/dark-room.png';
+        backgroundImage = isLightTheme ? './assets/light-room.png' : './assets/dark-room.png';
     } else if (width >= 768) {
-        backgroundImage = isLightTheme ? './assests/light-room2.png' : './assests/dark-room2.png';
+        backgroundImage = isLightTheme ? './assets/light-room2.png' : './assets/dark-room2.png';
     } else {
-        backgroundImage = isLightTheme ? './assests/light-room1.png' : './assests/dark-room1.png';
+        backgroundImage = isLightTheme ? './assets/light-room1.png' : './assets/dark-room1.png';
     }
     
     body.style.backgroundImage = `url('${backgroundImage}')`;
