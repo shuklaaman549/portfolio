@@ -115,7 +115,7 @@ body.light-theme .nav-link { text-shadow: none; }
 
 body.light-theme .hamburger span { box-shadow: none; }
 
-.hero { min-height: 115vh; display: flex; align-items: center; position: relative; overflow: hidden; background: transparent !important; }
+.hero { min-height: 106vh; display: flex; align-items: center; position: relative; overflow: hidden; background: transparent !important; }
 
 .hero-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; }
 
@@ -1406,5 +1406,11 @@ body.light-theme .skill-bar {
   .skill-range::-moz-range-thumb {
     width: 14px;
     height: 14px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
   }
 }
