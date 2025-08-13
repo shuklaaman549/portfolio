@@ -50,22 +50,22 @@ window.addEventListener('scroll', () => {
     });
 });
 
-document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-    e.preventDefault();
+// document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+//     e.preventDefault();
     
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const subject = this.querySelectorAll('input[type="text"]')[1].value;
-    const message = this.querySelector('textarea').value;
+//     const name = this.querySelector('input[type="text"]').value;
+//     const email = this.querySelector('input[type="email"]').value;
+//     const subject = this.querySelectorAll('input[type="text"]')[1].value;
+//     const message = this.querySelector('textarea').value;
     
-    if (!name || !email || !subject || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
+//     if (!name || !email || !subject || !message) {
+//         alert('Please fill in all fields');
+//         return;
+//     }
     
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    this.reset();
-});
+//     alert('Thank you for your message! I\'ll get back to you soon.');
+//     this.reset();
+// });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -211,4 +211,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
     
     addSectionAnimations();
+
+    const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !subject || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    try {
+      const SERVICE_ID = 'service_0jgil8l';
+      const TEMPLATE_ID = 'template_pjgwhz8';
+
+      const templateParams = {
+        name,
+        email,
+        subject,
+        message,
+      };
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+
+      alert("Thank you! Your message has been sent.");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert("Sorry, something went wrong while sending your message. Please try again later.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+      submitBtn.innerHTML = originalText;
+    }
+  });
 });
