@@ -188,7 +188,8 @@ window.addEventListener('resize', () => {
 
 function initSkillsStack() {
   const rows = document.querySelectorAll('#skills.skills-revamp .skill-row');
-
+  
+  // Keep your existing initialization EXACTLY as it was
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -203,6 +204,7 @@ function initSkillsStack() {
     const label = row.querySelector('.skill-level');
     const initial = parseInt(row.dataset.level, 10) || 0;
 
+    // Keep exactly as you had it before
     fill.style.width = initial + '%';
     label.textContent = initial + '%';
     range.value = initial;
@@ -215,10 +217,65 @@ function initSkillsStack() {
 
     observer.observe(row);
   });
+
+  // ONLY ADD the stacking effect
+  const handleStacking = () => {
+    const cards = document.querySelectorAll('#skills.skills-revamp .skill-card');
+    const skillsSection = document.querySelector('#skills.skills-revamp');
+    
+    if (!skillsSection) return;
+    
+    const sectionRect = skillsSection.getBoundingClientRect();
+    const sectionBottom = sectionRect.bottom;
+    const sectionTop = sectionRect.top;
+    
+    // Only apply stacking if we're in the skills section
+    if (sectionTop < window.innerHeight && sectionBottom > 0) {
+      cards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect();
+        const stickyTop = 120;
+        
+        // Remove all stacking classes first
+        for(let i = 1; i <= 9; i++) {
+          card.classList.remove(`is-stacked-${i}`);
+        }
+        
+        if (cardRect.top <= stickyTop) {
+          // Calculate how many cards are stacked above this one
+          let stackLevel = 0;
+          cards.forEach((otherCard, otherIndex) => {
+            if (otherIndex < index) {
+              const otherRect = otherCard.getBoundingClientRect();
+              if (otherRect.top <= stickyTop) {
+                stackLevel++;
+              }
+            }
+          });
+          
+          // Apply stacking class based on position in stack
+          if (stackLevel > 0 && stackLevel <= 9) {
+            card.classList.add(`is-stacked-${stackLevel}`);
+          }
+        }
+      });
+    }
+  };
+
+  // Throttled scroll listener
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        handleStacking();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onScroll);
 }
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
