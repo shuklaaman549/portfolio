@@ -1,570 +1,1270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Aman Shukla</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Aman Shukla</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <button class="theme-toggle" id="themeToggle">
-    <i class="fas fa-sun"></i>
+      <i class="fas fa-sun"></i>
     </button>
 
     <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo"><span>Aman.</span></div>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger"><span></span><span></span><span></span></div>
-    </div>
+      <div class="nav-container">
+        <div class="nav-logo"><span>Aman.</span></div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
     </nav>
 
     <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-title">
-            <span class="greeting">Hi, I'm</span>
-            <span class="name">Aman Shukla</span>
-            <div class="role-container">
-              <span class="role-static">Aspiring</span>
-              <span class="role-dynamic" id="roleText"></span>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-title">
+              <span class="greeting">Hi, I'm</span>
+              <span class="name">Aman Shukla</span>
+              <div class="role-container">
+                <span class="role-static">Aspiring</span>
+                <span class="role-dynamic" id="roleText"></span>
+              </div>
             </div>
+            <p class="hero-description">
+              Exploring the intersection of cloud technologies, data
+              engineering, and efficient problem solving.
+            </p>
           </div>
-          <p class="hero-description">
-            Exploring the intersection of cloud technologies, data engineering, and efficient problem solving.
-          </p>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>Scroll Down</span>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <div class="scroll-line"></div>
-        <span>Scroll Down</span>
-      </div>
-    </div>
     </section>
 
     <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Building expertise through diverse technical roles</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-badge">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="timeline-date">Nov 2024 - Present</div>
-                        <h3>AI Model Trainer & Prompt Engineer</h3>
-                        <h4>Remote • Freelance</h4>
-                        <p>Training LLMs through Reinforcement Learning from Human Feedback (RLHF), working on tasks such as designing complex, constraint-based prompts and writing evaluation rubrics for multilingual and logical reasoning tasks. Performing prompt-based SFT (Supervised Fine-Tuning) tasks, focusing on both STEM and general-purpose reasoning capabilities.</p>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-brain"></i> LLMs</span>
-                            <span><i class="fas fa-code"></i> Prompt Engineering</span>
-                            <span><i class="fas fa-chart-line"></i> RLHF</span>
-                            <span><i class="fas fa-language"></i> Multilingual Evaluation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-badge">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="timeline-date">Aug 2024 - Feb 2025</div>
-                        <h3>Associate Developer Intern</h3>
-                        <h4>Anuvrittiksha EdTech</h4>
-                        <p>Worked across multiple cloud-native workflows and scripting pipelines. Automated structured question data uploads into DynamoDB using AWS Glue, managed cloud storage operations via S3, and generated voiceovers using Amazon Polly for educational animations. Collaborated in an Agile environment with active GitHub workflow management.</p>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-database"></i> DynamoDB</span>
-                            <span><i class="fas fa-cloud"></i> S3</span>
-                            <span><i class="fab fa-aws"></i> AWS Glue</span>
-                            <span><i class="fab fa-github"></i> GitHub</span>
-                            <span><i class="fas fa-laptop-code"></i> Data Structures</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-badge">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="timeline-date">Dec 2021 - May 2024</div>
-                        <h3>Teaching Volunteer</h3>
-                        <h4>GyanArpan • Government Initiative</h4>
-                        <p>Selected through a government-led initiative to teach high school students for subjects like Mathematics, Physics, Chemistry, and English. Focused on delivering concept-based lessons to underprivileged students, enhancing their academic confidence while developing communication and mentoring abilities.</p>
-                        <div class="tech-tags">
-                            <span><i class="fas fa-calculator"></i> STEM Education</span>
-                            <span><i class="fas fa-users"></i> Mentorship</span>
-                            <span><i class="fas fa-microphone"></i> Public Speaking</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Building solutions that demonstrate technical expertise</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img class="project-screenshot" src="./assets/dashcraft.png" alt="DashCraft preview">
-                        <div class="project-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="https://dashcraftbyaman.vercel.app/" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>DashCraft</h3>
-                        <p>A collection of four mini data dashboards that combine real-world datasets with Python-based data analysis and visualization. Features clean, interactive dashboards using Streamlit and custom UI enhancements.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-python"></i> Python</span>
-                            <span><i class="fas fa-chart-pie"></i> Pandas</span>
-                            <span><i class="fas fa-chart-line"></i> Matplotlib</span>
-                            <span><i class="fas fa-database"></i> SQL</span>
-                            <span><i class="fas fa-stream"></i> Streamlit</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img class="project-screenshot" src="./assets/jointjot.png" alt="JointJot preview">
-                        <div class="project-icon">
-                            <i class="fas fa-edit"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="https://jointjot.vercel.app/" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>JointJot</h3>
-                        <p>Modern web application designed for seamless note-taking and visual whiteboarding. Features intuitive UI for note creation, canvas-based drawing, and backend integration using Convex for persistent storage.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-react"></i> Next.js</span>
-                            <span><i class="fab fa-react"></i> React</span>
-                            <span><i class="fab fa-js"></i> TypeScript</span>
-                            <span><i class="fas fa-paint-brush"></i> Tailwind</span>
-                            <span><i class="fas fa-database"></i> Convex</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="skills skills-revamp">
       <div class="container">
         <div class="section-header">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-subtitle">What I work with and how confident I am</p>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">
+            Building expertise through diverse technical roles
+          </p>
         </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-badge">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="timeline-date">Nov 2024 - Present</div>
+              <h3>AI Model Trainer & Prompt Engineer</h3>
+              <h4>Remote • Freelance</h4>
+              <p>
+                Training LLMs through Reinforcement Learning from Human Feedback
+                (RLHF), working on tasks such as designing complex,
+                constraint-based prompts and writing evaluation rubrics for
+                multilingual and logical reasoning tasks. Performing
+                prompt-based SFT (Supervised Fine-Tuning) tasks, focusing on
+                both STEM and general-purpose reasoning capabilities.
+              </p>
+              <div class="tech-tags">
+                <span><i class="fas fa-brain"></i> LLMs</span>
+                <span><i class="fas fa-code"></i> Prompt Engineering</span>
+                <span><i class="fas fa-chart-line"></i> RLHF</span>
+                <span
+                  ><i class="fas fa-language"></i> Multilingual Evaluation</span
+                >
+              </div>
+            </div>
+          </div>
 
-        <div class="skills-scroller" id="skillsScroller">
-        <!-- HTML5 -->
-        <div class="skill-row" data-level="90">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon html5"><i class="fab fa-html5"></i></div>
-                <div class="skill-info">
-                    <h4>HTML5</h4>
-                    <span class="skill-level">90%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="90" aria-label="HTML5 proficiency">
-                </div>
-                </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-badge">
+                <i class="fab fa-aws"></i>
+              </div>
+              <div class="timeline-date">Aug 2024 - Feb 2025</div>
+              <h3>Associate Developer Intern</h3>
+              <h4>Anuvrittiksha EdTech</h4>
+              <p>
+                Worked across multiple cloud-native workflows and scripting
+                pipelines. Automated structured question data uploads into
+                DynamoDB using AWS Glue, managed cloud storage operations via
+                S3, and generated voiceovers using Amazon Polly for educational
+                animations. Collaborated in an Agile environment with active
+                GitHub workflow management.
+              </p>
+              <div class="tech-tags">
+                <span><i class="fas fa-database"></i> DynamoDB</span>
+                <span><i class="fas fa-cloud"></i> S3</span>
+                <span><i class="fab fa-aws"></i> AWS Glue</span>
+                <span><i class="fab fa-github"></i> GitHub</span>
+                <span><i class="fas fa-laptop-code"></i> Data Structures</span>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
 
-        <!-- CSS3 -->
-        <div class="skill-row" data-level="85">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon css3"><i class="fab fa-css3-alt"></i></div>
-                <div class="skill-info">
-                    <h4>CSS3</h4>
-                    <span class="skill-level">85%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="85" aria-label="CSS3 proficiency">
-                </div>
-                </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-badge">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-date">Dec 2021 - May 2024</div>
+              <h3>Teaching Volunteer</h3>
+              <h4>GyanArpan • Government Initiative</h4>
+              <p>
+                Selected through a government-led initiative to teach high
+                school students for subjects like Mathematics, Physics,
+                Chemistry, and English. Focused on delivering concept-based
+                lessons to underprivileged students, enhancing their academic
+                confidence while developing communication and mentoring
+                abilities.
+              </p>
+              <div class="tech-tags">
+                <span><i class="fas fa-calculator"></i> STEM Education</span>
+                <span><i class="fas fa-users"></i> Mentorship</span>
+                <span><i class="fas fa-microphone"></i> Public Speaking</span>
+              </div>
             </div>
-            </div>
-        </div>
-
-        <!-- JavaScript -->
-        <div class="skill-row" data-level="80">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
-                <div class="skill-info">
-                    <h4>JavaScript</h4>
-                    <span class="skill-level">80%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="80" aria-label="JavaScript proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- TypeScript -->
-        <div class="skill-row" data-level="75">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon ts"><i class="fab fa-js"></i></div>
-                <div class="skill-info">
-                    <h4>TypeScript</h4>
-                    <span class="skill-level">75%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="75" aria-label="TypeScript proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Python -->
-        <div class="skill-row" data-level="88">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon python"><i class="fab fa-python"></i></div>
-                <div class="skill-info">
-                    <h4>Python</h4>
-                    <span class="skill-level">88%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="88" aria-label="Python proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- AWS -->
-        <div class="skill-row" data-level="70">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
-                <div class="skill-info">
-                    <h4>AWS</h4>
-                    <span class="skill-level">70%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="70" aria-label="AWS proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- SQL -->
-        <div class="skill-row" data-level="82">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon sql"><i class="fas fa-database"></i></div>
-                <div class="skill-info">
-                    <h4>SQL</h4>
-                    <span class="skill-level">82%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="82" aria-label="SQL proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Pandas -->
-        <div class="skill-row" data-level="78">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon pandas"><i class="fas fa-chart-bar"></i></div>
-                <div class="skill-info">
-                    <h4>Pandas</h4>
-                    <span class="skill-level">78%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="78" aria-label="Pandas proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Streamlit -->
-        <div class="skill-row" data-level="76">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon streamlit"><i class="fas fa-stream"></i></div>
-                <div class="skill-info">
-                    <h4>Streamlit</h4>
-                    <span class="skill-level">76%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="76" aria-label="Streamlit proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Next.js -->
-        <div class="skill-row" data-level="72">
-            <div class="skill-sticky">
-            <div class="skill-card">
-                <div class="skill-left">
-                <div class="skill-icon nextjs"><i class="fab fa-react"></i></div>
-                <div class="skill-info">
-                    <h4>Next.js</h4>
-                    <span class="skill-level">72%</span>
-                </div>
-                </div>
-                <div class="skill-right">
-                <div class="skill-bar">
-                    <div class="skill-fill"></div>
-                    <input class="skill-range" type="range" min="0" max="100" value="72" aria-label="Next.js proficiency">
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Duplicate .skill-row blocks to add more skills -->
+          </div>
         </div>
       </div>
     </section>
 
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Building solutions that demonstrate technical expertise
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                class="project-screenshot"
+                src="./assets/dashcraft.png"
+                alt="DashCraft preview"
+              />
+              <div class="project-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://dashcraftbyaman.vercel.app/"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>DashCraft</h3>
+              <p>
+                A collection of four mini data dashboards that combine
+                real-world datasets with Python-based data analysis and
+                visualization. Features clean, interactive dashboards using
+                Streamlit and custom UI enhancements.
+              </p>
+              <div class="project-tech">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-chart-pie"></i> Pandas</span>
+                <span><i class="fas fa-chart-line"></i> Matplotlib</span>
+                <span><i class="fas fa-database"></i> SQL</span>
+                <span><i class="fas fa-stream"></i> Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                class="project-screenshot"
+                src="./assets/jointjot.png"
+                alt="JointJot preview"
+              />
+              <div class="project-icon">
+                <i class="fas fa-edit"></i>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://jointjot.vercel.app/"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>JointJot</h3>
+              <p>
+                Modern web application designed for seamless note-taking and
+                visual whiteboarding. Features intuitive UI for note creation,
+                canvas-based drawing, and backend integration using Convex for
+                persistent storage.
+              </p>
+              <div class="project-tech">
+                <span><i class="fab fa-react"></i> Next.js</span>
+                <span><i class="fab fa-react"></i> React</span>
+                <span><i class="fab fa-js"></i> TypeScript</span>
+                <span><i class="fas fa-paint-brush"></i> Tailwind</span>
+                <span><i class="fas fa-database"></i> Convex</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills skills-revamp">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">
+            What I work with and how confident I am
+          </p>
+        </div>
+
+        <div class="skills-scroller" id="skillsScroller">
+          <div class="skill-row" data-level="70">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
+                  <div class="skill-info">
+                    <h4>AWS</h4>
+                    <span class="skill-level">70%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="70"
+                      aria-label="AWS proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="85">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon git">
+                    <i class="fab fa-git-alt"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Git and GitHub</h4>
+                    <span class="skill-level">85%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="85"
+                      aria-label="Git and GitHub proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon sql">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>SQL</h4>
+                    <span class="skill-level">82%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="82"
+                      aria-label="SQL proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="78">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon pandas">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Pandas</h4>
+                    <span class="skill-level">78%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="78"
+                      aria-label="Pandas proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="76">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon numpy">
+                    <i class="fas fa-cubes"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Numpy</h4>
+                    <span class="skill-level">76%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="76"
+                      aria-label="Numpy proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="70">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon plotly">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Plotly-dash</h4>
+                    <span class="skill-level">70%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="70"
+                      aria-label="Plotly-dash proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="74">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon matplotlib">
+                    <i class="fas fa-chart-pie"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Matplotlib</h4>
+                    <span class="skill-level">74%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="74"
+                      aria-label="Matplotlib proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="88">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon python">
+                    <i class="fab fa-python"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Python</h4>
+                    <span class="skill-level">88%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="88"
+                      aria-label="Python proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="72">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon cpp"><i class="fas fa-code"></i></div>
+                  <div class="skill-info">
+                    <h4>C++</h4>
+                    <span class="skill-level">72%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="72"
+                      aria-label="C++ proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="90">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon html5">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>HTML</h4>
+                    <span class="skill-level">90%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="90"
+                      aria-label="HTML proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="85">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon css3">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>CSS</h4>
+                    <span class="skill-level">85%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="85"
+                      aria-label="CSS proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="80">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon js">
+                    <i class="fab fa-js-square"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>JavaScript</h4>
+                    <span class="skill-level">80%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="80"
+                      aria-label="JavaScript proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="84">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon dsa">
+                    <i class="fas fa-layer-group"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Data Structures</h4>
+                    <span class="skill-level">84%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="84"
+                      aria-label="Data Structures proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon oop">
+                    <i class="fas fa-project-diagram"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>OOP</h4>
+                    <span class="skill-level">82%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="82"
+                      aria-label="OOP proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="78">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon cloud">
+                    <i class="fas fa-cloud"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Cloud Computing</h4>
+                    <span class="skill-level">78%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="78"
+                      aria-label="Cloud Computing proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="90">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon windows">
+                    <i class="fab fa-windows"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Windows</h4>
+                    <span class="skill-level">90%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="90"
+                      aria-label="Windows proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="75">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon linux">
+                    <i class="fab fa-linux"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Linux</h4>
+                    <span class="skill-level">75%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="75"
+                      aria-label="Linux proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="70">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon rlhf">
+                    <i class="fas fa-brain"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>RLHF</h4>
+                    <span class="skill-level">70%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="70"
+                      aria-label="RLHF proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="72">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon sft">
+                    <i class="fas fa-sliders-h"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Prompt-Based SFT</h4>
+                    <span class="skill-level">72%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="72"
+                      aria-label="Prompt-Based SFT proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon prompt">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Prompt Engineering</h4>
+                    <span class="skill-level">82%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="82"
+                      aria-label="Prompt Engineering proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="86">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon labeling">
+                    <i class="fas fa-tags"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Data Labeling</h4>
+                    <span class="skill-level">86%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="86"
+                      aria-label="Data Labeling proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="78">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon etl">
+                    <i class="fas fa-exchange-alt"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>ETL</h4>
+                    <span class="skill-level">78%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="78"
+                      aria-label="ETL proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="80">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon jira"><i class="fab fa-jira"></i></div>
+                  <div class="skill-info">
+                    <h4>Jira</h4>
+                    <span class="skill-level">80%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="80"
+                      aria-label="Jira proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="78">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon confluence">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Confluence</h4>
+                    <span class="skill-level">78%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="78"
+                      aria-label="Confluence proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="88">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon stem">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>STEM</h4>
+                    <span class="skill-level">88%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="88"
+                      aria-label="STEM proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="82">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon teaching">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Teaching</h4>
+                    <span class="skill-level">82%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="82"
+                      aria-label="Teaching proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-level="80">
+            <div class="skill-sticky">
+              <div class="skill-card">
+                <div class="skill-left">
+                  <div class="skill-icon speaking">
+                    <i class="fas fa-microphone"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Public Speaking</h4>
+                    <span class="skill-level">80%</span>
+                  </div>
+                </div>
+                <div class="skill-right">
+                  <div class="skill-bar">
+                    <div class="skill-fill"></div>
+                    <input
+                      class="skill-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="80"
+                      aria-label="Public Speaking proficiency"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate technologist with focus on cloud and data</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-card">
-                        <h3><i class="fas fa-user-tie"></i> Professional Journey</h3>
-                        <p>I'm a recent B.Tech graduate in Information Technology with a strong focus on cloud computing, data analytics, and software development. During my Associate Developer Internship at Anuvrittiksha, I worked extensively with AWS services like DynamoDB, Glue, S3, and Polly, which deepened my interest in cloud technologies.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3><i class="fa-solid fa-laptop-code"></i> Technical Expertise</h3>
-                        <p>I've built projects like DashCraft, reflecting my hands-on experience with Python, data visualization, and SQL. Alongside this, I've trained large language models by designing prompts, writing evaluation rubrics, and ranking outputs, sharpening my logical reasoning and AI understanding.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h3><i class="fa-solid fa-chart-line"></i> Career Focus</h3>
-                        <p>With a solid foundation in data structures, competitive programming, and backend development, I'm currently looking for full-time opportunities where I can contribute to impactful tech solutions in Cloud Engineering, Data Analysis, or Software Development roles.</p>
-                    </div>
-                    
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-icon"><i class="fas fa-code"></i></div>
-                            <span class="stat-number">600+</span>
-                            <span class="stat-label">Problems Solved</span>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon"><i class="fas fa-chalkboard-user"></i></div>
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Students Taught</span>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon"><i class="fas fa-brain"></i></div>
-                            <span class="stat-number">4★</span>
-                            <span class="stat-label">CodeChef Rating</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-image">
-                    <div class="education-card">
-                        <div class="education-header">
-                            <i class="fas fa-university"></i>
-                            <h3>Education</h3>
-                        </div>
-                        <div class="education-item">
-                            <h4>B.Tech, Information Technology</h4>
-                            <p>Rajiv Gandhi Institute of Petroleum Technology, Jais</p>
-                            <span><i class="fas fa-calendar"></i> Dec 2021 - May 2025</span>
-                        </div>
-                    </div>
-
-                    <div class="education-card">
-                        <div class="education-header">
-                            <i class="fas fa-trophy"></i>
-                            <h3>Achievements</h3>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-medal"></i>
-                            <span>JEE Advanced 2021 Qualified - Top 2%</span>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-medal"></i>
-                            <span>NDA Qualified & Appeared for SSB</span>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-medal"></i>
-                            <span>Top 12 Global Rank - CodeChef Weekly Contest</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Passionate technologist with focus on cloud and data
+          </p>
         </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-card">
+              <h3><i class="fas fa-user-tie"></i> Professional Journey</h3>
+              <p>
+                I'm a recent B.Tech graduate in Information Technology with a
+                strong focus on cloud computing, data analytics, and software
+                development. During my Associate Developer Internship at
+                Anuvrittiksha, I worked extensively with AWS services like
+                DynamoDB, Glue, S3, and Polly, which deepened my interest in
+                cloud technologies.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <h3>
+                <i class="fa-solid fa-laptop-code"></i> Technical Expertise
+              </h3>
+              <p>
+                I've built projects like DashCraft, reflecting my hands-on
+                experience with Python, data visualization, and SQL. Alongside
+                this, I've trained large language models by designing prompts,
+                writing evaluation rubrics, and ranking outputs, sharpening my
+                logical reasoning and AI understanding.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <h3><i class="fa-solid fa-chart-line"></i> Career Focus</h3>
+              <p>
+                With a solid foundation in data structures, competitive
+                programming, and backend development, I'm currently looking for
+                full-time opportunities where I can contribute to impactful tech
+                solutions in Cloud Engineering, Data Analysis, or Software
+                Development roles.
+              </p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat">
+                <div class="stat-icon"><i class="fas fa-code"></i></div>
+                <span class="stat-number">600+</span>
+                <span class="stat-label">Problems Solved</span>
+              </div>
+              <div class="stat">
+                <div class="stat-icon">
+                  <i class="fas fa-chalkboard-user"></i>
+                </div>
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Students Taught</span>
+              </div>
+              <div class="stat">
+                <div class="stat-icon"><i class="fas fa-brain"></i></div>
+                <span class="stat-number">4★</span>
+                <span class="stat-label">CodeChef Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <div class="education-card">
+              <div class="education-header">
+                <i class="fas fa-university"></i>
+                <h3>Education</h3>
+              </div>
+              <div class="education-item">
+                <h4>B.Tech, Information Technology</h4>
+                <p>Rajiv Gandhi Institute of Petroleum Technology, Jais</p>
+                <span><i class="fas fa-calendar"></i> Dec 2021 - May 2025</span>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-header">
+                <i class="fas fa-trophy"></i>
+                <h3>Achievements</h3>
+              </div>
+              <div class="achievement">
+                <i class="fas fa-medal"></i>
+                <span>JEE Advanced 2021 Qualified - Top 2%</span>
+              </div>
+              <div class="achievement">
+                <i class="fas fa-medal"></i>
+                <span>NDA Qualified & Appeared for SSB</span>
+              </div>
+              <div class="achievement">
+                <i class="fas fa-medal"></i>
+                <span>Top 12 Global Rank - CodeChef Weekly Contest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Ready to create something amazing together?</p>
-                <h2 class="section-title">Let's Connect</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <a href="mailto:shuklaaman549@gmail.com">shuklaaman549@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <a href="tel:+917004046568">+91-7004046568</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <span>Bettiah, Bihar</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/shuklaaman549/" class="social-link linkedin" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/shuklaaman549" class="social-link github" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:shuklaaman549@gmail.com" class="social-link email" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://x.com/shuklaaman549" class="social-link twitter" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/i.amanshukla" class="social-link instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-subtitle">
+            Ready to create something amazing together?
+          </p>
+          <h2 class="section-title">Let's Connect</h2>
         </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:shuklaaman549@gmail.com"
+                  >shuklaaman549@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <a href="tel:+917004046568">+91-7004046568</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <span>Bettiah, Bihar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/shuklaaman549/"
+            class="social-link linkedin"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/shuklaaman549"
+            class="social-link github"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="mailto:shuklaaman549@gmail.com"
+            class="social-link email"
+            target="_blank"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://x.com/shuklaaman549"
+            class="social-link twitter"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/i.amanshukla"
+            class="social-link instagram"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        (function(){
-            emailjs.init("_ubvTq_KkKSN057Cj");
-        })();
+      (function () {
+        emailjs.init("_ubvTq_KkKSN057Cj");
+      })();
     </script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

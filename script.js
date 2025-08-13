@@ -218,7 +218,7 @@ function initSkillsStack() {
         const cardRect = card.getBoundingClientRect();
         const stickyTop = 120;
 
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 1; i <= 27; i++) {
           card.classList.remove(`is-stacked-${i}`);
         }
         if (cardRect.top <= stickyTop) {
@@ -231,7 +231,7 @@ function initSkillsStack() {
               }
             }
           });
-          if (stackLevel > 0 && stackLevel <= 9) {
+          if (stackLevel > 0 && stackLevel <= 27) {
             card.classList.add(`is-stacked-${stackLevel}`);
           }
         }
