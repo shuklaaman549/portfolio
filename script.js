@@ -186,6 +186,40 @@ window.addEventListener('resize', () => {
     resizeTimeout = setTimeout(setResponsiveBackground, 250);
 });
 
+function initSkillsStack() {
+  const rows = document.querySelectorAll('#skills.skills-revamp .skill-row');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.querySelector('.skill-card').classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  rows.forEach(row => {
+    const fill = row.querySelector('.skill-fill');
+    const range = row.querySelector('.skill-range');
+    const label = row.querySelector('.skill-level');
+    const initial = parseInt(row.dataset.level, 10) || 0;
+
+    fill.style.width = initial + '%';
+    label.textContent = initial + '%';
+    range.value = initial;
+
+    range.addEventListener('input', () => {
+      const val = range.value;
+      fill.style.width = val + '%';
+      label.textContent = val + '%';
+    });
+
+    observer.observe(row);
+  });
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     
@@ -243,4 +277,5 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = originalText;
     }
   });
+  initSkillsStack();
 });

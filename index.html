@@ -182,74 +182,229 @@
         </div>
     </section>
     
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Technical expertise across multiple domains</p>
+    <section id="skills" class="skills skills-revamp">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-subtitle">What I work with and how confident I am</p>
+    </div>
+
+    <div class="skills-scroller" id="skillsScroller">
+      <!-- HTML5 -->
+      <div class="skill-row" data-level="90">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon html5"><i class="fab fa-html5"></i></div>
+              <div class="skill-info">
+                <h4>HTML5</h4>
+                <span class="skill-level">90%</span>
+              </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud & DevOps</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">DynamoDB</span>
-                        <span class="skill-item">S3</span>
-                        <span class="skill-item">Glue</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Git</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Data & Analytics</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">Numpy</span>
-                        <span class="skill-item">Matplotlib</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Streamlit</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Software Engineering</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">C++</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">DSA</span>
-                        <span class="skill-item">Next.js</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Prompting</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">RLHF</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                        <span class="skill-item">Rubric Design</span>
-                        <span class="skill-item">SFT</span>
-                        <span class="skill-item">Model Evaluation</span>
-                    </div>
-                </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="90" aria-label="HTML5 proficiency">
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- CSS3 -->
+      <div class="skill-row" data-level="85">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon css3"><i class="fab fa-css3-alt"></i></div>
+              <div class="skill-info">
+                <h4>CSS3</h4>
+                <span class="skill-level">85%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="85" aria-label="CSS3 proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-row" data-level="80">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+              <div class="skill-info">
+                <h4>JavaScript</h4>
+                <span class="skill-level">80%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="80" aria-label="JavaScript proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TypeScript -->
+      <div class="skill-row" data-level="75">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon ts"><i class="fab fa-js"></i></div>
+              <div class="skill-info">
+                <h4>TypeScript</h4>
+                <span class="skill-level">75%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="75" aria-label="TypeScript proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-row" data-level="88">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon python"><i class="fab fa-python"></i></div>
+              <div class="skill-info">
+                <h4>Python</h4>
+                <span class="skill-level">88%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="88" aria-label="Python proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS -->
+      <div class="skill-row" data-level="70">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
+              <div class="skill-info">
+                <h4>AWS</h4>
+                <span class="skill-level">70%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="70" aria-label="AWS proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SQL -->
+      <div class="skill-row" data-level="82">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon sql"><i class="fas fa-database"></i></div>
+              <div class="skill-info">
+                <h4>SQL</h4>
+                <span class="skill-level">82%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="82" aria-label="SQL proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pandas -->
+      <div class="skill-row" data-level="78">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon pandas"><i class="fas fa-chart-bar"></i></div>
+              <div class="skill-info">
+                <h4>Pandas</h4>
+                <span class="skill-level">78%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="78" aria-label="Pandas proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Streamlit -->
+      <div class="skill-row" data-level="76">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon streamlit"><i class="fas fa-stream"></i></div>
+              <div class="skill-info">
+                <h4>Streamlit</h4>
+                <span class="skill-level">76%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="76" aria-label="Streamlit proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next.js -->
+      <div class="skill-row" data-level="72">
+        <div class="skill-sticky">
+          <div class="skill-card">
+            <div class="skill-left">
+              <div class="skill-icon nextjs"><i class="fab fa-react"></i></div>
+              <div class="skill-info">
+                <h4>Next.js</h4>
+                <span class="skill-level">72%</span>
+              </div>
+            </div>
+            <div class="skill-right">
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+                <input class="skill-range" type="range" min="0" max="100" value="72" aria-label="Next.js proficiency">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate .skill-row blocks to add more skills -->
+    </div>
+  </div>
+</section>
+
 
     <section id="about" class="about">
         <div class="container">
