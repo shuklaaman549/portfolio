@@ -50,23 +50,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-//     e.preventDefault();
-    
-//     const name = this.querySelector('input[type="text"]').value;
-//     const email = this.querySelector('input[type="email"]').value;
-//     const subject = this.querySelectorAll('input[type="text"]')[1].value;
-//     const message = this.querySelector('textarea').value;
-    
-//     if (!name || !email || !subject || !message) {
-//         alert('Please fill in all fields');
-//         return;
-//     }
-    
-//     alert('Thank you for your message! I\'ll get back to you soon.');
-//     this.reset();
-// });
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -236,7 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const SERVICE_ID = 'service_0jgil8l';
-      const TEMPLATE_ID = 'template_pjgwhz8';
+      const TEMPLATE_ID_ACK = 'template_pjgwhz8';
+      const TEMPLATE_ID_OWNER = 'template_vjzbn7c';
 
       const templateParams = {
         name,
@@ -245,7 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
         message,
       };
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID_OWNER, templateParams);
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID_ACK, templateParams);
 
       alert("Thank you! Your message has been sent.");
       form.reset();
