@@ -150,34 +150,24 @@ function initThemeToggle() {
 
 function setResponsiveBackground() {
   const body = document.body;
-  const isLight = body.classList.contains('light-theme');
+  const isLightTheme = body.classList.contains('light-theme');
   const width = window.innerWidth;
-  let imgSrc;
+  let backgroundImage;
 
-  if (width >= 1024) imgSrc = isLight ? './assets/light-room.jpg' : './assets/dark-room.jpg';
-  else if (width >= 768) imgSrc = isLight ? './assets/light-room2.jpg' : './assets/dark-room2.jpg';
-  else imgSrc = isLight ? './assets/light-room1.jpg' : './assets/dark-room1.jpg';
+  if (width >= 1024) {
+    backgroundImage = isLightTheme ? './assets/light-room.png' : './assets/dark-room.png';
+  } else if (width >= 768) {
+    backgroundImage = isLightTheme ? './assets/light-room2.png' : './assets/dark-room2.png';
+  } else {
+    backgroundImage = isLightTheme ? './assets/light-room1.png' : './assets/dark-room1.png';
+  }
 
-  // ← Insert preloader here
-  //<link rel="preload" as="image" href="./assets/light-room.jpg" imagesrcset="./assets/light-room.jpg 1x, ./assets/light-room@2x.jpg 2x">
-
-  const img = new Image();
-  img.onload = () => {
-    body.style.backgroundImage = `url('${imgSrc}')`;
-    console.log('✅ Background set:', imgSrc);
-  };
-  img.onerror = (e) => {
-    console.error('❌ Background load failed:', imgSrc, e);
-  };
-  img.src = imgSrc;
-
-  // Optional: Early fallback (if needed for non-iOS)
-  // body.style.backgroundImage = `url('${imgSrc}')`;
+  body.style.backgroundImage = `url('${backgroundImage}')`;
   body.style.backgroundSize = 'cover';
   body.style.backgroundPosition = 'center center';
   body.style.backgroundRepeat = 'no-repeat';
+  body.style.backgroundAttachment = 'scroll';
 }
-
 
 let resizeTimeout;
 window.addEventListener('resize', () => {

@@ -1409,8 +1409,8 @@ body.light-theme .skill-bar {
   }
 }
 
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   body {
     background-attachment: scroll !important;
   }
-}
+} */
