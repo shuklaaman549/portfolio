@@ -149,9 +149,10 @@ function initThemeToggle() {
 }
 
 function setResponsiveBackground() {
-  const body = document.body;
-  const isLightTheme = body.classList.contains('light-theme');
+  const backgroundContainer = document.getElementById('backgroundContainer');
+  const isLightTheme = document.body.classList.contains('light-theme');
   const width = window.innerWidth;
+  
   let backgroundImage;
 
   if (width >= 1024) {
@@ -162,12 +163,9 @@ function setResponsiveBackground() {
     backgroundImage = isLightTheme ? './assets/light-room1.png' : './assets/dark-room1.png';
   }
 
-  body.style.backgroundImage = `url('${backgroundImage}')`;
-  body.style.backgroundSize = 'cover';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundRepeat = 'no-repeat';
-  body.style.backgroundAttachment = 'fixed';
+  backgroundContainer.style.backgroundImage = `url('${backgroundImage}')`;
 }
+
 
 let resizeTimeout;
 window.addEventListener('resize', () => {

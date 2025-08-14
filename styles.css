@@ -40,6 +40,26 @@ body.light-theme {
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+.bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
@@ -1408,9 +1428,3 @@ body.light-theme .skill-bar {
     height: 14px;
   }
 }
-
-/* @supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll !important;
-  }
-} */
