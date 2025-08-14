@@ -166,7 +166,7 @@ function setResponsiveBackground() {
   body.style.backgroundSize = 'cover';
   body.style.backgroundPosition = 'center center';
   body.style.backgroundRepeat = 'no-repeat';
-  body.style.backgroundAttachment = 'scroll';
+  body.style.backgroundAttachment = 'fixed';
 }
 
 let resizeTimeout;
