@@ -149,30 +149,25 @@ function initThemeToggle() {
 }
 
 function setResponsiveBackground() {
+  const body = document.body;
+  const isLight = body.classList.contains('light-theme');
+  const width = window.innerWidth;
+  let imgSrc;
+  if (width >= 1024) imgSrc = isLight ? './assets/light-room.jpg' : './assets/dark-room.jpg';
+  else if (width >= 768) imgSrc = isLight ? './assets/light-room2.jpg' : './assets/dark-room2.jpg';
+  else imgSrc = isLight ? './assets/light-room1.jpg' : './assets/dark-room1.jpg';
+
   const img = new Image();
   img.onload = () => {
-    document.body.style.backgroundImage = `url('${backgroundImage}')`;
+    body.style.backgroundImage = `url('${imgSrc}')`;
+    console.log('Background set:', imgSrc);
   };
-  img.src = backgroundImage;
-  const body = document.body;
-  const isLightTheme = body.classList.contains('light-theme');
-  const width = window.innerWidth;
-  let backgroundImage;
-
-  if (width >= 1024) {
-    backgroundImage = isLightTheme ? './assets/light-room.png' : './assets/dark-room.png';
-  } else if (width >= 768) {
-    backgroundImage = isLightTheme ? './assets/light-room2.png' : './assets/dark-room2.png';
-  } else {
-    backgroundImage = isLightTheme ? './assets/light-room1.png' : './assets/dark-room1.png';
-  }
-
-  body.style.backgroundImage = `url('${backgroundImage}')`;
-  body.style.backgroundSize = 'cover';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundRepeat = 'no-repeat';
-  body.style.backgroundAttachment = 'fixed';
+  img.onerror = (e) => {
+    console.error('Background load error:', imgSrc, e);
+  };
+  img.src = imgSrc;
 }
+
 
 let resizeTimeout;
 window.addEventListener('resize', () => {
