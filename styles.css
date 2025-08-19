@@ -539,6 +539,8 @@ transform: scale(1.06);
     transition: all 0.3s ease;
 }
 
+@import 'https://unpkg.com/css-scroll-timeline';
+
 .autoShow {
   animation: text-appear both;
   animation-timeline: view();
