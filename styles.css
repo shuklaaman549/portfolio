@@ -539,39 +539,21 @@ transform: scale(1.06);
     transition: all 0.3s ease;
 }
 
-@supports (animation-timeline: view()) {
-  .autoShow {
-    animation: text-appear both;
-    animation-timeline: view();
-  }
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
 }
 
 @keyframes text-appear {
-  from {
-    opacity: 1;
-    transform: translateY(180px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+      opacity: 1;
+      transform: translateY(180px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
-
-
-.autoShow {
-  opacity: 1;
-  transform: translateY(180px);
-}
-
-/* This gets overridden by the @supports block when animation works */
-@supports not (animation-timeline: view()) {
-  .autoShow {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-}
-
 
 
 
