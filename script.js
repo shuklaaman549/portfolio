@@ -1,85 +1,113 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+/* ========= Smooth anchor scroll ========= */
+document.addEventListener("click", (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  const href = link.getAttribute("href");
+  if (href === "#") return;
+
+  const target = document.querySelector(href);
+  if (target) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-link').forEach(n =>
-  n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-  })
-);
-
-window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+});
 
-  let current = '';
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= (sectionTop - 200)) {
-      current = section.getAttribute('id');
-    }
+/* ========= Mobile nav toggle ========= */
+(() => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  if (!hamburger || !navMenu) return;
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
   });
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+  document.querySelectorAll(".nav-link").forEach((n) => {
+    n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
   });
+})();
+
+/* ========= Navbar state + active section highlight ========= */
+(() => {
+  const navbar = document.getElementById("navbar");
+  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+  const sections = Array.from(document.querySelectorAll("section"));
+
+  const setNavScrolled = () => {
+    if (!navbar) return;
+    if (window.scrollY > 100) navbar.classList.add("scrolled");
+    else navbar.classList.remove("scrolled");
+  };
+
+  const setActiveLink = () => {
+    let current = "";
+    const offset = 200;
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - offset) {
+        current = section.getAttribute("id") || "";
+      }
+    });
+    navLinks.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === `#${current}`
+      );
+    });
+  };
+
+  const onScroll = () => {
+    setNavScrolled();
+    setActiveLink();
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
+/* ========= Timeline/Project animations (play CSS animations when visible) ========= */
+(() => {
+  const animatedEls = document.querySelectorAll(
+    ".timeline-item, .project-card"
+  );
+  if (!animatedEls.length) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = "running";
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
+
+  animatedEls.forEach((el) => io.observe(el));
+})();
+
+/* ========= Page loaded flag (if needed by CSS) ========= */
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.animationPlayState = 'running';
-    }
-  });
-}, {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-});
-
-document.querySelectorAll('.timeline-item, .project-card').forEach(el => {
-  observer.observe(el);
-});
-
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
-
+/* ========= Rotating typewriter ========= */
 function rotatingTypeWriter() {
-  const roles = ['Cloud Engineer', 'Data Analyst', 'Software Developer'];
-  const roleElement = document.getElementById('roleText');
+  const roles = ["Cloud Engineer", "Data Analyst", "Software Developer"];
+  const roleElement = document.getElementById("roleText");
+  if (!roleElement) return;
+
   let currentRoleIndex = 0;
   let currentCharIndex = 0;
   let isDeleting = false;
 
   function type() {
     const currentRole = roles[currentRoleIndex];
-
     if (!isDeleting) {
       roleElement.textContent = currentRole.substring(0, currentCharIndex + 1);
       currentCharIndex++;
@@ -107,160 +135,97 @@ function rotatingTypeWriter() {
   type();
 }
 
+/* ========= Add float animation class to sections when in view ========= */
 function addSectionAnimations() {
-  const sections = document.querySelectorAll('section');
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('section-animate');
-      }
-    });
-  }, { threshold: 0.1 });
+  const sections = document.querySelectorAll("section");
+  if (!sections.length) return;
 
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-animate");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  sections.forEach((section) => io.observe(section));
 }
 
+/* ========= Theme toggle + responsive background ========= */
 function initThemeToggle() {
-  const themeToggle = document.getElementById('themeToggle');
+  const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
-  const icon = themeToggle.querySelector('i');
+  if (!themeToggle) return;
 
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  if (currentTheme === 'light') {
-    body.classList.add('light-theme');
-    icon.className = 'fas fa-moon';
-  }
+  const icon = themeToggle.querySelector("i");
+  const setIcon = () => {
+    if (!icon) return;
+    icon.className = body.classList.contains("light-theme")
+      ? "fas fa-moon"
+      : "fas fa-sun";
+  };
 
+  const currentTheme = localStorage.getItem("theme") || "dark";
+  if (currentTheme === "light") body.classList.add("light-theme");
+  setIcon();
   setResponsiveBackground();
 
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    if (body.classList.contains('light-theme')) {
-      icon.className = 'fas fa-moon';
-      localStorage.setItem('theme', 'light');
-    } else {
-      icon.className = 'fas fa-sun';
-      localStorage.setItem('theme', 'dark');
-    }
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    localStorage.setItem(
+      "theme",
+      body.classList.contains("light-theme") ? "light" : "dark"
+    );
+    setIcon();
     setResponsiveBackground();
   });
 }
 
 function setResponsiveBackground() {
-  const backgroundContainer = document.getElementById('backgroundContainer');
-  const isLightTheme = document.body.classList.contains('light-theme');
-  const width = window.innerWidth;
-  
-  let backgroundImage;
+  const backgroundContainer = document.getElementById("backgroundContainer");
+  if (!backgroundContainer) return;
 
+  const isLightTheme = document.body.classList.contains("light-theme");
+  const width = window.innerWidth;
+
+  let backgroundImage;
   if (width >= 1024) {
-    backgroundImage = isLightTheme ? './assets/light-room.png' : './assets/dark-room.png';
+    backgroundImage = isLightTheme
+      ? "./assets/light-room.png"
+      : "./assets/dark-room.png";
   } else if (width >= 768) {
-    backgroundImage = isLightTheme ? './assets/light-room2.png' : './assets/dark-room2.png';
+    backgroundImage = isLightTheme
+      ? "./assets/light-room2.png"
+      : "./assets/dark-room2.png";
   } else {
-    backgroundImage = isLightTheme ? './assets/light-room1.png' : './assets/dark-room1.png';
+    backgroundImage = isLightTheme
+      ? "./assets/light-room1.png"
+      : "./assets/dark-room1.png";
   }
 
   backgroundContainer.style.backgroundImage = `url('${backgroundImage}')`;
 }
 
-
 let resizeTimeout;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(setResponsiveBackground, 250);
-});
+window.addEventListener(
+  "resize",
+  () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setResponsiveBackground, 250);
+  },
+  { passive: true }
+);
 
-function initSkillsStack() {
-  const rows = document.querySelectorAll('#skills.skills-revamp .skill-row');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelector('.skill-card').classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  rows.forEach(row => {
-    const fill = row.querySelector('.skill-fill');
-    const range = row.querySelector('.skill-range');
-    const label = row.querySelector('.skill-level');
-    const initial = parseInt(row.dataset.level, 10) || 0;
-    fill.style.width = initial + '%';
-    label.textContent = initial + '%';
-    range.value = initial;
-
-    range.addEventListener('input', () => {
-      const val = range.value;
-      fill.style.width = val + '%';
-      label.textContent = val + '%';
-    });
-
-    observer.observe(row);
-  });
-
-  const handleStacking = () => {
-    const cards = document.querySelectorAll('#skills.skills-revamp .skill-card');
-    const skillsSection = document.querySelector('#skills.skills-revamp');
-    if (!skillsSection) return;
-
-    const sectionRect = skillsSection.getBoundingClientRect();
-    const sectionBottom = sectionRect.bottom;
-    const sectionTop = sectionRect.top;
-
-    if (sectionTop < window.innerHeight && sectionBottom > 0) {
-      cards.forEach((card, index) => {
-        const cardRect = card.getBoundingClientRect();
-        const stickyTop = 120;
-
-        for (let i = 1; i <= 27; i++) {
-          card.classList.remove(`is-stacked-${i}`);
-        }
-        if (cardRect.top <= stickyTop) {
-          let stackLevel = 0;
-          cards.forEach((otherCard, otherIndex) => {
-            if (otherIndex < index) {
-              const otherRect = otherCard.getBoundingClientRect();
-              if (otherRect.top <= stickyTop) {
-                stackLevel++;
-              }
-            }
-          });
-          if (stackLevel > 0 && stackLevel <= 27) {
-            card.classList.add(`is-stacked-${stackLevel}`);
-          }
-        }
-      });
-    }
-  };
-
-  let ticking = false;
-  const onScroll = () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        handleStacking();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  };
-
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('resize', onScroll);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
-  setTimeout(rotatingTypeWriter, 500);
-  addSectionAnimations();
-
-  const form = document.getElementById('contactForm');
+/* ========= Contact form (EmailJS) ========= */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
   if (!form) return;
 
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = form.name.value.trim();
@@ -269,20 +234,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = form.message.value.trim();
 
     if (!name || !email || !subject || !message) {
-      alert('Please fill in all fields');
+      alert("Please fill in all fields");
       return;
     }
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
+    submitBtn.style.opacity = "0.7";
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
     try {
-      const SERVICE_ID = 'service_0jgil8l';
-      const TEMPLATE_ID_ACK = 'template_pjgwhz8';
-      const TEMPLATE_ID_OWNER = 'template_vjzbn7c';
+      const SERVICE_ID = "service_0jgil8l";
+      const TEMPLATE_ID_ACK = "template_pjgwhz8";
+      const TEMPLATE_ID_OWNER = "template_vjzbn7c";
 
       const templateParams = { name, email, subject, message };
 
@@ -293,13 +258,21 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
     } catch (err) {
       console.error(err);
-      alert("Sorry, something went wrong while sending your message. Please try again later.");
+      alert(
+        "Sorry, something went wrong while sending your message. Please try again later."
+      );
     } finally {
       submitBtn.disabled = false;
-      submitBtn.style.opacity = '1';
+      submitBtn.style.opacity = "1";
       submitBtn.innerHTML = originalText;
     }
   });
+}
 
-  initSkillsStack();
+/* ========= Boot ========= */
+document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
+  setTimeout(rotatingTypeWriter, 500);
+  addSectionAnimations();
+  initContactForm();
 });
